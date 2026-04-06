@@ -1,4 +1,4 @@
-name = "staffforge-api"
+name = "staffforge-api-production"
 main = "src/index.js"
 compatibility_date = "2024-01-01"
 account_id = "9e624da14806d5e8ef3d25af1fa34816"
