@@ -1,0 +1,38 @@
+name = "staffforge-api"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+account_id = "9e624da14806d5e8ef3d25af1fa34816"
+
+# 启用 workers.dev 子域名
+workers_dev = true
+preview_urls = true
+
+# D1 Database binding
+[[d1_databases]]
+binding = "DB"
+database_name = "staffforge-db"
+database_id = "cfd05e0b-c16a-454f-820e-fba0df8a5a94"
+
+# Environment variables
+[vars]
+ENVIRONMENT = "development"
+FRONTEND_URL = "https://staffforge.pages.dev"
+JWT_SECRET = "your-super-secret-jwt-key-change-in-production"
+
+# Production environment
+[env.production]
+vars = { ENVIRONMENT = "production", FRONTEND_URL = "https://staffforge.pages.dev", JWT_SECRET = "your-production-jwt-secret"}
+workers_dev = true
+preview_urls = true
+
+[[env.production.d1_databases]]
+binding = "DB"
+database_name = "staffforge-db"
+database_id = "cfd05e0b-c16a-454f-820e-fba0df8a5a94"
+
+# Secrets (use `wrangler secret put` to set)
+# GOOGLE_CLIENT_ID
+# GOOGLE_CLIENT_SECRET
+# PAYPAL_CLIENT_ID
+# PAYPAL_CLIENT_SECRET
+# PAYPAL_WEBHOOK_ID
