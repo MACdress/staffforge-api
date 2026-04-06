@@ -21,6 +21,7 @@ JWT_SECRET = "your-super-secret-jwt-key-change-in-production"
 
 # Production environment
 [env.production]
+name = "staffforge-api-production"
 vars = { ENVIRONMENT = "production", FRONTEND_URL = "https://staffforge.pages.dev", JWT_SECRET = "your-production-jwt-secret"}
 workers_dev = true
 preview_urls = true
