@@ -30,6 +30,22 @@ binding = "DB"
 database_name = "staffforge-db"
 database_id = "cfd05e0b-c16a-454f-820e-fba0df8a5a94"
 
+# Observability - Logs
+[observability]
+enabled = false
+head_sampling_rate = 1
+
+[observability.logs]
+enabled = true
+head_sampling_rate = 1
+persist = true
+invocation_logs = true
+
+[observability.traces]
+enabled = false
+persist = true
+head_sampling_rate = 1
+
 # Secrets (use `wrangler secret put` to set)
 # GOOGLE_CLIENT_ID
 # GOOGLE_CLIENT_SECRET
